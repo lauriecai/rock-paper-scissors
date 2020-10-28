@@ -12,6 +12,7 @@
 <body>
     <h2>game - rock, paper, scissors</h2>
     <script>
+        // declare global variables
         let playerScore, computerScore, computerSelection, playerSelection;
 
         // function: computerPlay - randomly returns 'Rock', 'Paper', or 'Scissors'
@@ -28,9 +29,11 @@
 
         // function: playRound - plays a single round of rock, paper, scissors
         function playRound(playerSelection, computerSelection) {
-            // throw hand
+            // player specifies hand
+            let playerHand = prompt('Pick one: rock, paper, or scissors?');
+            // everyone show hands
             computerSelection = computerPlay();
-            playerSelection = computerPlay();
+            playerSelection = playerHand;
             // assign points
             if (playerSelection.toUpperCase() == 'ROCK' && computerSelection.toUpperCase() == 'PAPER') {
                 computerScore += 1;
@@ -64,14 +67,6 @@
             }
         }
 
-        newGame();
-        newGame();
-        newGame();
-        newGame();
-        newGame();
-        newGame();
-        newGame();
-        newGame();
         newGame();
 
     </script>
